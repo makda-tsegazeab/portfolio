@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Makda Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#137fec",
+            "background-light": "#f6f7f8",
+            "background-dark": "#101922",
+          },
+          fontFamily: {
+            "display": ["Lexend", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+    }
+    /* Fixed width content container similar to the image */
+    .content-wrapper {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+    /* Smooth scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
+    /* Navbar active link style */
+    .nav-link.active {
+      color: #137fec;
+      font-weight: bold;
+      position: relative;
+    }
+    .nav-link.active::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #137fec;
+    }
+  </style>
+</head>
+<body class="bg-white font-display text-gray-800 min-h-screen">
+  <!-- Navigation Bar -->
+  <nav class="sticky top-0 z-10 bg-white border-b border-gray-200 py-4">
+    <div class="content-wrapper">
+      <div class="flex justify-center space-x-8">
+        <a href="#about" class="nav-link text-gray-700 hover:text-primary transition-colors duration-200 px-2">About</a>
+        <a href="#projects" class="nav-link text-gray-700 hover:text-primary transition-colors duration-200 px-2">Projects</a>
+        <a href="#contact" class="nav-link text-gray-700 hover:text-primary transition-colors duration-200 px-2">Contact</a>
+        <a href="#resume" class="nav-link text-gray-700 hover:text-primary transition-colors duration-200 px-2">Resume</a>
+      </div>
+    </div>
+  </nav>
+  
+  <main class="content-wrapper">
+    <!-- About/Hero Section -->
+    <section id="about" class="py-12">
+      <div class="flex flex-col lg:flex-row items-start gap-8">
+        <!-- Smaller Profile Image -->
+        <div class="flex-shrink-0 mx-auto lg:mx-0">
+          <div class="bg-center bg-no-repeat bg-cover rounded-full border-2 border-primary/50 size-40 md:size-48" 
+               data-alt="Professional headshot of Makda"
+               style='background-image: url("assets/portfolio_pic2.jpg");'>
+          </div>
+        </div>
+        
+        <!-- About Text - Now takes more space -->
+        <div class="flex-1">
+          <h1 class="text-4xl lg:text-5xl font-bold text-gray-900">Makda T Mammo</h1>
+          <p class="mt-2 text-lg lg:text-xl text-primary">Software Engineer</p>
+          
+          <div class="mt-6">
+            <h2 class="text-2xl font-bold text-gray-900 mb-3">Hello!</h2>
+            <p class="text-base font-normal leading-relaxed text-gray-700 max-w-3xl">
+              
+
+ I am a final-year Computer Science student at Mekelle University, building a foundation to work at the critical intersection of technology and society. My academic focus is on understanding algorithmic systems, with a growing interest in their fairness, ethical implications, and the policy frameworks needed to guide them.
+            </p>
+            <br/>
+
+            <p class="text-base font-normal leading-relaxed text-gray-700 max-w-3xl">
+              
+
+My passion for this field was sparked by my experience as an AddisCoder alum (2019) and later as a Teaching Assistant (Summer 2025), where I saw firsthand the power of technology to educate and empower, as well as the responsibility that comes with building and deploying these systems.
+            </p>
+            <br/>
+            <p class="text-base font-normal leading-relaxed text-gray-700 max-w-3xl">
+              
+
+I am now seeking to transition from undergraduate studies to a specialized master's program where I can deepen this inquiry. I am particularly drawn to the interdisciplinary approaches of KAIST's Science & Technology Policy (STP) and UC Berkeley's Master of Information Management & Systems (MIMS) programs. My goal is to gain the advanced technical and policy analysis skills necessary to contribute to more equitable and accountable technological development.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Projects Section -->
+    <section id="projects" class="py-12">
+      <h2 class="text-3xl font-bold text-gray-900 mb-8">Projects</h2>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        
+        <!-- Project 1: MentorMe -->
+        <div class="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-200">
+          <div class="w-full h-48 bg-center bg-cover bg-white"
+               data-alt="MentorMe project screenshot"
+               style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCoOhc53Wzzwa4D-DSjLRB4R637GzNbBw3KMWfYFxfFqBUKbI09vmcb6orC0kcjghg-UefBlcL-ioP4QkOmVYpsExXcVpnxHSPOD2qXtmMvyUEJ4sq-Sz1jDuVw4Ciy3W78M0Bu2-vL-Q5oSn2Tg2sFsPp77wdEWuP8mlpdtKtOTzmbLGu1Ifk2z2_GnIvNOuUHO1EBEIBIu_sdFVoBNTa4h3ZTHhn7g1YIy3hYOIY4Enf0IYPVvjF1eAHmD9uX3LpWJRv6do3SPeo'); background-size: contain; background-repeat: no-repeat; background-position: center;">
+          </div>
+          <div class="p-6">
+            <a href="https://github.com/makda-tsegazeab/Mentor_Me" target="_blank" class="text-xl font-bold text-gray-900 hover:text-primary transition-colors inline-block">
+              MentorMe
+            </a>
+            <p class="text-sm text-gray-600 mt-2 mb-4">AI-powered tutor-matching app that connects students and tutors using a hybrid recommendation engine.</p>
+            
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="text-xs font-medium bg-gray-100 text-gray-700 px-3 py-1.5 rounded-full">Flutter</span>
+              <span class="text-xs font-medium bg-gray-100 text-gray-700 px-3 py-1.5 rounded-full">Firebase</span>
+              <span class="text-xs font-medium bg-gray-100 text-gray-700 px-3 py-1.5 rounded-full">PyTorch</span>
+            </div>
+            
+            <div class="mt-4 border-t border-gray-200 pt-4">
+              <h4 class="font-semibold text-gray-800 mb-2">Details</h4>
+              <p class="text-sm text-gray-600">
+                Developed a full-stack, AI-driven mobile platform using Flutter, Firebase, and an offline Python recommender (CBF + CF). Implemented automated matching, role-based access, verified tutor onboarding, and Firestore-synchronized chat + relationship tracking.
+              </p>
+              <div class="flex items-center space-x-4 mt-4">
+                <a href="https://github.com/makda-tsegazeab/Mentor_Me" target="_blank" class="flex items-center gap-1.5 text-sm text-primary hover:underline">
+                  <span class="material-symbols-outlined !text-xl">code</span>
+                  GitHub
+                </a>
+                <a href="https://mentorme-demo.com" target="_blank" class="flex items-center gap-1.5 text-sm text-primary hover:underline">
+                  <span class="material-symbols-outlined !text-xl">open_in_new</span>
+                  Live Demo
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Project 2: Breast Cancer Histology Image Classification -->
+        <div class="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-200">
+          <div class="w-full h-48 bg-center bg-cover bg-white"
+               data-alt="Breast cancer histology image classification"
+               style="background-image: url('assets/breast_cancer.png'); background-size: contain; background-repeat: no-repeat; background-position: center; background-color: #f8f9fa;">
+          </div>
+          <div class="p-6">
+            <a href="https://github.com/makda-tsegazeab/BreastCancerHistologyImageClassification" target="_blank" class="text-xl font-bold text-gray-900 hover:text-primary transition-colors inline-block">
+              Breast Cancer Histology Image Classification
+            </a>
+            <p class="text-sm text-gray-600 mt-2 mb-4">Deep learning model for classifying breast cancer histology images</p>
+            
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="text-xs font-medium bg-gray-100 text-gray-700 px-3 py-1.5 rounded-full">Machine Learning</span>
+              <span class="text-xs font-medium bg-gray-100 text-gray-700 px-3 py-1.5 rounded-full">Medical Imaging</span>
+              <span class="text-xs font-medium bg-gray-100 text-gray-700 px-3 py-1.5 rounded-full">CNN</span>
+              <span class="text-xs font-medium bg-gray-100 text-gray-700 px-3 py-1.5 rounded-full">Healthcare</span>
+            </div>
+            
+            <div class="mt-4 border-t border-gray-200 pt-4">
+              <h4 class="font-semibold text-gray-800 mb-2">Details</h4>
+              <p class="text-sm text-gray-600">
+                I improved the development of two convolutional neural network(CNN) pipeline that integrated local and global image features to classify tissue samples into bengin, in situ and invasive carcinamo categories. 
+              </p>
+              <div class="flex items-center space-x-4 mt-4">
+                <a href="https://github.com/makda-tsegazeab/BreastCancerHistologyImageClassification" target="_blank" class="flex items-center gap-1.5 text-sm text-primary hover:underline">
+                  <span class="material-symbols-outlined !text-xl">code</span>
+                  GitHub
+                </a>
+                <a href="https://breast-cancer-demo.com" target="_blank" class="flex items-center gap-1.5 text-sm text-primary hover:underline">
+                  <span class="material-symbols-outlined !text-xl">open_in_new</span>
+                  Live Demo
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Project 3: Coffee Buddy -->
+        <div class="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-200">
+          <div class="w-full h-48 bg-center bg-cover bg-white"
+               data-alt="Coffee Buddy app"
+               style="background-image: url('assets/coffee.png'); background-size: contain; background-repeat: no-repeat; background-position: center; background-color: #f8f9fa;">
+          </div>
+          <div class="p-6">
+            <a href="https://www.figma.com/proto/mQYCu43StvpWWiq25stbrn/Intro-to-HCI-Project?page-id=575%3A1174&node-id=1113-2561&viewport=101%2C115%2C0.04&t=eVlmdJYjOotpU24r-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1113%3A2561" target="_blank" class="text-xl font-bold text-gray-900 hover:text-primary transition-colors inline-block">
+              Coffee Buddy
+            </a>
+            <p class="text-sm text-gray-600 mt-2 mb-4">Mobile app for tracking daily caffeine intake with personalized limits</p>
+            
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="text-xs font-medium bg-gray-100 text-gray-700 px-3 py-1.5 rounded-full">Mobile App</span>
+              <span class="text-xs font-medium bg-gray-100 text-gray-700 px-3 py-1.5 rounded-full">Health Tracking</span>
+              <span class="text-xs font-medium bg-gray-100 text-gray-700 px-3 py-1.5 rounded-full">Personalized Feedback</span>
+              <span class="text-xs font-medium bg-gray-100 text-gray-700 px-3 py-1.5 rounded-full">Figma</span>
+            </div>
+            
+            <div class="mt-4 border-t border-gray-200 pt-4">
+              <h4 class="font-semibold text-gray-800 mb-2">Details</h4>
+              <p class="text-sm text-gray-600">
+                A mobile app designed for tracking daily caffeine levels for individuals who depend on coffee for energy. The app calculates the amount of caffeine users should limit themselves to based on weight, updating dynamically with user input and feedback.
+              </p>
+      
+            </div>
+          </div>
+        </div>
+        
+         <!-- Project 4: Talent Discovery -->
+        <div class="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-200">
+          <div class="w-full h-48 bg-center bg-cover bg-white"
+               data-alt="Breast cancer histology image classification"
+               style="background-image: url('assets/Screenshot\ \(551\).png'); background-size: contain; background-repeat: no-repeat; background-position: center; background-color: #f8f9fa;">
+          </div>
+          <div class="p-6">
+            <a href="https://github.com/Strawhat404/TalentSearch-Messages" target="_blank" class="text-xl font-bold text-gray-900 hover:text-primary transition-colors inline-block">
+              Talent Discovery
+            </a>
+            <p class="text-sm text-gray-600 mt-2 mb-4">Deep learning model for classifying breast cancer histology images</p>
+            
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="text-xs font-medium bg-gray-100 text-gray-700 px-3 py-1.5 rounded-full">Machine Learning</span>
+              <span class="text-xs font-medium bg-gray-100 text-gray-700 px-3 py-1.5 rounded-full">Medical Imaging</span>
+              <span class="text-xs font-medium bg-gray-100 text-gray-700 px-3 py-1.5 rounded-full">CNN</span>
+              <span class="text-xs font-medium bg-gray-100 text-gray-700 px-3 py-1.5 rounded-full">Healthcare</span>
+            </div>
+            
+            <div class="mt-4 border-t border-gray-200 pt-4">
+              <h4 class="font-semibold text-gray-800 mb-2">Details</h4>
+              <p class="text-sm text-gray-600">
+                A robust Django-based backend for a premier talent management and recruitment platform specifically designed for the movie industry. This platform facilitates seamless collaboration between production houses, casting directors, and various well-known artists, streamlining the process of discovering and managing top-tier talent. It is engineered to handle complex user profiles, secure authentication, and extensive data management for high-profile industry professionals.
+              <div class="flex items-center space-x-4 mt-4">
+                <a href="https://github.com/makda/breast-cancer-classification" target="_blank" class="flex items-center gap-1.5 text-sm text-primary hover:underline">
+                  <span class="material-symbols-outlined !text-xl">code</span>
+                  GitHub
+                </a>
+                <a href="https://breast-cancer-demo.com" target="_blank" class="flex items-center gap-1.5 text-sm text-primary hover:underline">
+                  <span class="material-symbols-outlined !text-xl">open_in_new</span>
+                  Live Demo
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+       
+      </div>
+    </section>
+    
+    <!-- Contact Me Section -->
+    <section id="contact" class="py-12">
+      <h2 class="text-3xl font-bold text-gray-900 mb-8">Contact Me</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <a class="flex items-center p-4 bg-gray-50 rounded-lg shadow-sm border border-gray-200 hover:bg-gray-100 transition-colors" href="mailto:makda@email.com">
+          <span class="material-symbols-outlined text-primary !text-2xl mr-4" data-icon="email">email</span>
+          <div>
+            <p class="text-sm text-gray-500">Email</p>
+            <p class="text-base font-medium text-gray-800">makda@email.com</p>
+          </div>
+        </a>
+        
+        <a class="flex items-center p-4 bg-gray-50 rounded-lg shadow-sm border border-gray-200 hover:bg-gray-100 transition-colors" href="https://www.linkedin.com/in/makda-tsegazeab-1b1a02326/" target="_blank">
+          <svg aria-hidden="true" class="w-6 h-6 fill-primary mr-4" viewBox="0 0 24 24">
+            <path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.25 6.5 1.75 1.75 0 016.5 8.25zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"></path>
+          </svg>
+          <div>
+            <p class="text-sm text-gray-500">LinkedIn</p>
+            <p class="text-base font-medium text-gray-800">linkedin.com/in/makda</p>
+          </div>
+        </a>
+        
+        <a class="flex items-center p-4 bg-gray-50 rounded-lg shadow-sm border border-gray-200 hover:bg-gray-100 transition-colors" href="https://github.com/makda-tsegazeab" target="_blank">
+          <svg aria-hidden="true" class="w-6 h-6 fill-primary mr-4" viewBox="0 0 24 24">
+            <path clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.378.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" fill-rule="evenodd"></path>
+          </svg>
+          <div>
+            <p class="text-sm text-gray-500">GitHub</p>
+            <p class="text-base font-medium text-gray-800">github.com/makda-tsegazeab</p>
+          </div>
+        </a>
+      </div>
+    </section>
+    
+    <!-- Resume Section -->
+    <section id="resume" class="py-12">
+      <h2 class="text-3xl font-bold text-gray-900 mb-8">Resume</h2>
+      <div class="max-w-2xl mx-auto">
+        <div class="bg-gray-50 rounded-xl p-8 border border-gray-200 text-center">
+          <span class="material-symbols-outlined text-primary !text-5xl mb-4">description</span>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Download My Resume</h3>
+          <p class="text-gray-700 mb-6">Get a comprehensive overview of my experience, education, skills, and projects.</p>
+          <a href="makda-resume.pdf" download class="inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-6 py-3 text-base font-semibold text-white shadow-sm transition-all hover:bg-primary/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">
+            <span class="material-symbols-outlined !text-xl">download</span>
+            Download Resume (PDF)
+          </a>
+          <p class="text-sm text-gray-500 mt-4">Updated December 2025 • 2 pages</p>
+        </div>
+      </div>
+    </section>
+    
+    <footer class="text-center p-8 mt-8 border-t border-gray-200">
+      <p class="text-sm text-gray-500">© 2025 Makda. All rights reserved.</p>
+    </footer>
+  </main>
+
+<script>
+  // Smooth scroll for navigation links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      
+      const targetId = this.getAttribute('href');
+      if (targetId === '#') return;
+      
+      const targetElement = document.querySelector(targetId);
+      if (targetElement) {
+        window.scrollTo({
+          top: targetElement.offsetTop - 80,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+  
+  // Update active nav link on scroll
+  window.addEventListener('scroll', function() {
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-link');
+    
+    let current = '';
+    
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.clientHeight;
+      
+      if (scrollY >= (sectionTop - 100)) {
+        current = section.getAttribute('id');
+      }
+    });
+    
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === `#${current}`) {
+        link.classList.add('active');
+      }
+    });
+  });
+</script>
+</body>
+</html>
